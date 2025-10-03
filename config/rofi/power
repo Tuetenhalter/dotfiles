@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+
+confirm="confirm?"
+names=("shutdown" "restart" "sleep" "hibernate")
+icons=("system-shutdown" "system-reboot" "system-suspend" "system-hibernate")
+cmds=("systemctl poweroff" "systemctl reboot" "systemctl sleep" "systemctl hibernate")
+
+
+
+for i in "${!names[@]}"; do
+
+  if [ x"$@" = x"${names[i]}" ]
+  then 
+	  # echo ${cmds[i]}
+	  coproc (rofi -show a:"~/.config/rofi/confirm '${names[i]}?' '${cmds[i]}'"   > /dev/null  2>&1 )
+	  exit 0
+  fi
+done
+
+
+
+
+for i in "${!names[@]}"; do
+	echo -e "${names[i]}\0icon\x1f${icons[i]}"
+done
+
+# echo -en "\0keep-selection\x1ftrue\n"
+# echo -en "\0keep-filter\x1ftrue\n"
+echo -en "\0prompt\x1fpower\n"

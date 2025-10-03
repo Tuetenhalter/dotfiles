@@ -1,0 +1,13 @@
+
+
+configuration {
+	modi: "drun,ssh,power:~/.config/rofi/power";
+	show-icons: true;
+	display-combi: "Applications";
+	combi-modi: "drun,power";
+	combi-display-format: "{text}";
+
+}
+
+
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"

@@ -6,7 +6,6 @@ configuration {
 	display-combi: "Applications";
 	combi-modi: "drun,power";
 	combi-display-format: "{text}";
-
 }
 
 

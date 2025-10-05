@@ -12,7 +12,11 @@ packages=(
 	qt5-wayland	
 	qt6-wayland
 	noto-fonts
+	hyprpolkitagent # Authentication Agent
 	dunst # notification daemon
+
+	kitty
+	dolphin
 
 	# gui
 	rofi
@@ -23,7 +27,7 @@ packages=(
 	wireplumber
 
 	#bluetooth
-	bluz
+	bluez
 	bluez-utils
 	bluetui
 
@@ -43,4 +47,6 @@ echo "run sudo pacman -S ${packages[@]}"
 echo 
 
 sudo pacman -S "${packages[@]}"
+
+./copy.sh
 

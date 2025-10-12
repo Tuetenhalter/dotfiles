@@ -32,6 +32,7 @@ packages=(
     noto-fonts
     hyprpolkitagent # Authentication Agent
     dunst # notification daemon
+    brightnessctl
 
     kitty
     dolphin
@@ -40,10 +41,13 @@ packages=(
     # gui
     rofi
     waybar
+    otf-font-awesome #icons
 
     # sound
     pipewire
     wireplumber
+    pulseaudio
+    pavucontrol
 
     # bluetooth
     bluez

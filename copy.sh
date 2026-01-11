@@ -5,7 +5,7 @@ echo "run copy"
 if [ ! -f ~/.config/hypr/hyprland/monitors.conf ]; then
     echo "copy monitor"
     mkdir -p ~/.config/hypr/hyprland/
-    cp ./config/hypr/hyprland/monitors.conf ~/.config/hypr/hyprland/monitor
+    cp ./config/hypr/hyprland/monitors.conf ~/.config/hypr/hyprland/monitors.conf
 fi
 
 # copys all files without monitor

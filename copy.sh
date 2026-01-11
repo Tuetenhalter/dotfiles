@@ -11,3 +11,6 @@ fi
 # copys all files without monitor
 rsync -av --exclude 'hypr/hyprland/monitors.conf' ./config/ ~/.config/
 
+
+echo "Reload Hyprland"
+hyprctl reload

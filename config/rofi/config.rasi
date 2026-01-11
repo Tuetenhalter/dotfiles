@@ -18,7 +18,7 @@ configuration {
 	kb-select-10: "Control+0";
 	me-select-entry: "";
 	me-accept-entry: "!MousePrimary"; 
-	kb-cancel: "MousePrimary";
+	kb-cancel: "MousePrimary,Escape";
 }
 
 

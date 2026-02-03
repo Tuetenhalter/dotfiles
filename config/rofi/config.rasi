@@ -4,7 +4,7 @@ configuration {
 	modi: "drun,ssh,power:~/.config/rofi/power";
 	show-icons: true;
 	display-combi: "Applications";
-	combi-modi: "drun,power";
+	combi-modi: "drun,ssh,power";
 	combi-display-format: "{text}";
 	kb-select-1: "Control+1";
 	kb-select-2: "Control+2";

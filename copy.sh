@@ -8,6 +8,11 @@ if [ ! -f ~/.config/hypr/hyprland/monitors.conf ]; then
     cp ./config/hypr/hyprland/monitors.conf ~/.config/hypr/hyprland/monitors.conf
 fi
 
+if [ ! -f ~/.zprofile ]; then
+    echo "copy zprofile"
+    cp ./zprofile ~/.zprofile
+fi
+
 # copys all files without monitor
 rsync -av --exclude 'hypr/hyprland/monitors.conf' ./config/ ~/.config/
 

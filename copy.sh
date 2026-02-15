@@ -18,10 +18,16 @@ if [ ! -f ~/.zprofile ]; then
     cp ./zprofile ~/.zprofile
 fi
 
-# Use 'sed' to find the ZSH_THEME line and replace the value
-sed -i "s/^ZSH_THEME=.*/ZSH_THEME=\"$ZSH_THEME\"/" ~/.zshrc
+
+# copy zshrc
+echo
+echo copy zshrc
+rsync -av zshrc ~/.zshrc
+
 
 # copys all files without monitor
+echo
+echo copy all file without monitor
 rsync -av --exclude 'hypr/hyprland/monitors.conf' ./config/ ~/.config/
 
 

@@ -72,9 +72,28 @@ if ask_for_confirmation "Do you want to run 'sudo pacman -S' to install these pa
     sudo pacman -S "${packages[@]}"
 fi
 
+# --- Oh My Zsh Installation ---
+echo
+echo "## Step 3: Oh My Zsh Installation"
+if ask_for_confirmation "Do you want to install Oh My Zsh (runs a script from GitHub)?"; then
+    echo "Running sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# --- Zsh Plugins ---
+echo
+echo "## Step 4: Zsh plugins Installation"
+if ask_for_confirmation "Do you want to install the zsh-autosuggestions and zsh-syntax-highlighting"; then
+    echo "git clone "https://github.com/zsh-users/zsh-autosuggestions.git" ~/.oh-my-zsh/custom/plugins"
+    git clone "https://github.com/zsh-users/zsh-autosuggestions.git" ~/.oh-my-zsh/custom/plugins
+
+    git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins
+    echo "git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins"
+fi  
+
 # --- Custom Copy Script ---
 echo
-echo "## Step 3: Run Custom Copy Script"
+echo "## Step 5: Run Custom Copy Script"
 if ask_for_confirmation "Do you want to copy the config files"; then
     echo "Running ./copy.sh"
     # Check if the script exists and is executable before running
@@ -83,14 +102,6 @@ if ask_for_confirmation "Do you want to copy the config files"; then
     else
         echo "Error: './copy.sh' not found or not executable. Skipping."
     fi
-fi
-
-# --- Oh My Zsh Installation ---
-echo
-echo "## Step 4: Oh My Zsh Installation"
-if ask_for_confirmation "Do you want to install Oh My Zsh (runs a script from GitHub)?"; then
-    echo "Running sh -c \"\$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 

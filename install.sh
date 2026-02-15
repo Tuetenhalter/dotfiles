@@ -84,11 +84,12 @@ fi
 echo
 echo "## Step 4: Zsh plugins Installation"
 if ask_for_confirmation "Do you want to install the zsh-autosuggestions and zsh-syntax-highlighting"; then
-    echo "git clone "https://github.com/zsh-users/zsh-autosuggestions.git" ~/.oh-my-zsh/custom/plugins"
-    git clone "https://github.com/zsh-users/zsh-autosuggestions.git" ~/.oh-my-zsh/custom/plugins
+    echo "git clone "https://github.com/zsh-users/zsh-autosuggestions.git" ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+    git clone "https://github.com/zsh-users/zsh-autosuggestions.git" ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-    git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins
-    echo "git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins"
+    echo "git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+    git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    
 fi  
 
 # --- Custom Copy Script ---

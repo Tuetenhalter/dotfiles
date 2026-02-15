@@ -57,6 +57,8 @@ packages=(
     # internet
     nm-connection-editor
 
+    cliphist # clipboard history
+
     # application
     vim
     steam

@@ -1,8 +1,4 @@
 
-
-ZSH_THEME="af-magic"
-
-
 echo "run copy"
 
 # copy monitor if it dones exist

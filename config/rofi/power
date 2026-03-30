@@ -2,7 +2,7 @@
 
 
 confirm="confirm?"
-names=("shutdown" "restart" "sleep" "hibernate")
+names=("shutdown" "reboot" "sleep" "hibernate")
 icons=("system-shutdown" "system-reboot" "system-suspend" "system-hibernate")
 cmds=("systemctl poweroff" "systemctl reboot" "systemctl sleep" "systemctl hibernate")
 

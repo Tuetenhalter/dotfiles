@@ -61,7 +61,7 @@ button:hover {
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    background-color: #64727D; 
+    background-color: #64727D;
 }
 
 #workspaces button.active {
@@ -94,7 +94,8 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#custom-gpu-usage {
+#custom-gpu-usage,
+#custom-keyboard-toggle {
     padding: 0 10px;
     color: #ffffff;
 }
@@ -105,12 +106,12 @@ button:hover {
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
@@ -123,7 +124,8 @@ button:hover {
     color: #000000;
 }
 
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: #ffffff;
     background-color: #26A65B;
 }
@@ -239,11 +241,11 @@ label:focus {
     background-color: #2980b9;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
@@ -290,11 +292,11 @@ label:focus {
     min-width: 16px;
 }
 
-#keyboard-state > label {
+#keyboard-state>label {
     padding: 0 5px;
 }
 
-#keyboard-state > label.locked {
+#keyboard-state>label.locked {
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -303,7 +305,7 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 #privacy {
@@ -330,4 +332,14 @@ label:focus {
 #custom-gpu-usage {
     background-color: #000000;
     color: #ffffff;
+}
+
+#custom-keyboard-toggle {
+    background-color: #ebdbb2;
+    font-size: 20px;
+    color: #000;
+}
+
+#custom-keyboard-toggle:hover {
+    background-color: #fabd2f;
 }

@@ -18,6 +18,7 @@
     "modules-right": [
         //"mpd",
         //"idle_inhibitor",
+        "custom/keyboard-toggle",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
@@ -144,12 +145,26 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery": {
         "states": {
@@ -164,7 +179,13 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -204,7 +225,11 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": [
+                "",
+                "",
+                ""
+            ]
         },
         "on-click": "pavucontrol"
     },
@@ -226,5 +251,11 @@
         "return-type": "json",
         "format-icons": "󰾲",
         "on-click": "ghostty -e nvtop"
+    },
+    "custom/keyboard-toggle": {
+        "format": "󰌌",
+        "tooltip": false,
+        "on-click": "kill -34 $(ps -C wvkbd-mobintl)",
+        "on-click-right": "pkill wvkbd-mobintl" 
     }
 }

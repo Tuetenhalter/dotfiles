@@ -5,3 +5,5 @@
 
 - install waybar gpu usage throu yay
     - gpu-usage-waybar-git 
+
+- yay wvkbd

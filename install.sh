@@ -46,7 +46,6 @@ packages=(
     # sound
     pipewire
     wireplumber
-    pulseaudio
     pavucontrol
 
     # bluetooth

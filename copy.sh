@@ -9,10 +9,10 @@ if [ ! -f ~/.config/hypr/hyprland/monitors.conf ]; then
 fi
 
 # copy zprofile if it dones exist
-if [ ! -f ~/.zprofile ]; then
+# if [ ! -f ~/.zprofile ]; then
     echo "copy zprofile"
     cp ./zprofile ~/.zprofile
-fi
+# fi
 
 
 # copy zshrc

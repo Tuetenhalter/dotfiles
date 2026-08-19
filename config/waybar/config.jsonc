@@ -231,7 +231,7 @@
                 ""
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pkill pavucontrol || pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",

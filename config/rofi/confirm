@@ -1,26 +1,17 @@
 #!/usr/bin/env bash
 
+# arg1 = prompt text
+# arg2 = command to execute
+# arg3 = selected entry (passed automatically by rofi on selection)
 
-# arg1 = promp1
-# arg2 = cmd
-
-if [ "$ROFI_RETV" == "0" ]
-then
-	# prompt = $1
-	echo -e "\0prompt\x1f$1"
-	echo -e "yes"
-	echo -e "\0date\x1ftrue"
-	echo -e "no"
-	exit 0
+if [[ "$ROFI_RETV" == "0" ]]; then
+    printf '\0prompt\x1f%s\n' "$1"
+    printf 'yes\n'
+    printf 'no\n'
+    exit 0
 fi
 
-
-if [ "$3" == "yes" ] 
-then 
-	# idk what this is look in rofi doc
-	coproc ( $2 > /dev/null  2>&1 )
+if [[ "$ROFI_RETV" == "1" && "$3" == "yes" ]]; then
+    # Run detached in a new session so rofi doesn't wait for or kill the command
+    setsid -f bash -c "$2" >/dev/null 2>&1
 fi
-
-
-
-

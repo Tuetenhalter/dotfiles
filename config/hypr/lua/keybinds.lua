@@ -102,7 +102,6 @@ hl.bind("XF86AudioPrev",  exec("playerctl previous"),   { locked = true })
 
 
 -- OBS
-
 hl.bind(mainMod .. " + F12", exec("obs-cmd replay save"))
 
 
@@ -111,6 +110,5 @@ hl.bind(mainMod .. " + F12", exec("obs-cmd replay save"))
 hl.bind(mainMod .. " + H", exec("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"))
 
 -- screenshot
-
 hl.bind("print",           exec([[pkill slurp || grim -g "$(slurp -c 00000000)" - | wl-copy]]))
 hl.bind("CONTROL + print", exec([[pkill slurp || grim -g "$(slurp -c 00000000)" - | swappy -f -]]))

@@ -35,8 +35,9 @@ packages=(
     brightnessctl
 
     kitty
-    dolphin
+    nautilus
     zsh
+    rsync # used by copy.sh
 
     # gui
     rofi
@@ -58,6 +59,12 @@ packages=(
     nm-connection-editor
 
     cliphist # clipboard history
+    wl-clipboard # wl-copy / wl-paste
+
+    # screenshots
+    grim
+    slurp
+    swappy
 
     # application
     vim

@@ -8,7 +8,6 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("firefox")
 
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
-    hl.exec_cmd("waybar")
     hl.exec_cmd("hyprctl setcursor Adwaita 12")
 
     -- clipboard history
@@ -19,5 +18,5 @@ hl.on("hyprland.start", function()
 end)
 
 -- exec: top-level code runs on every config (re)load
--- restart waybar
+-- (re)start waybar -- this is also the initial start, so no waybar in hyprland.start
 hl.exec_cmd("killall waybar ; waybar")

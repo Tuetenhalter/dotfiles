@@ -8,6 +8,7 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("firefox")
 
     hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("waybar")
     hl.exec_cmd("hyprctl setcursor Adwaita 12")
 
     -- clipboard history
@@ -17,6 +18,9 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("wvkbd-mobintl -L 400 --hidden")
 end)
 
--- exec: top-level code runs on every config (re)load
--- (re)start waybar -- this is also the initial start, so no waybar in hyprland.start
-hl.exec_cmd("killall waybar ; waybar")
+-- restart waybar on config reload
+-- (not top-level: that runs while Hyprland is still initializing, before
+-- waybar can connect, so the first start lives in hyprland.start above)
+hl.on("config.reloaded", function()
+    hl.exec_cmd("killall waybar ; waybar")
+end)
